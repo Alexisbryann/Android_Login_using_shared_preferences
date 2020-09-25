@@ -1,4 +1,4 @@
-package com.pluralsight.candycoded;
+package android.app;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.pluralsight.candycoded.Candy;
 import com.pluralsight.candycoded.DB.CandyContract.CandyEntry;
 import com.pluralsight.candycoded.DB.CandyCursorAdapter;
 import com.pluralsight.candycoded.DB.CandyDbHelper;
@@ -22,6 +23,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.TextHttpResponseHandler;
+import com.pluralsight.candycoded.DetailActivity;
+import com.pluralsight.candycoded.InfoActivity;
+import com.pluralsight.candycoded.R;
 
 
 import cz.msebera.android.httpclient.Header;
