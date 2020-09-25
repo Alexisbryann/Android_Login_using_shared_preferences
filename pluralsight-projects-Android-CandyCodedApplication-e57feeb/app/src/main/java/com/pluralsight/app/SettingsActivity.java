@@ -1,4 +1,4 @@
-package com.pluralsight.candycoded;
+package com.pluralsight.app;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.pluralsight.candycoded.MainActivity">
+    tools:context="com.pluralsight.app.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"

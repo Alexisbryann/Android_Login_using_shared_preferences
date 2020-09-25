@@ -1,5 +1,7 @@
-package com.pluralsight.candycoded;
+package com.pluralsight.app;
 
+import android.app.InfoActivity;
+import android.app.MainActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

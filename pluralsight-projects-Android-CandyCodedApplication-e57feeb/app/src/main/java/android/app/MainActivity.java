@@ -15,17 +15,17 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.pluralsight.candycoded.Candy;
-import com.pluralsight.candycoded.DB.CandyContract.CandyEntry;
-import com.pluralsight.candycoded.DB.CandyCursorAdapter;
-import com.pluralsight.candycoded.DB.CandyDbHelper;
+import com.pluralsight.app.Candy;
+import com.pluralsight.app.DB.CandyContract.CandyEntry;
+import com.pluralsight.app.DB.CandyCursorAdapter;
+import com.pluralsight.app.DB.CandyDbHelper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.TextHttpResponseHandler;
-import com.pluralsight.candycoded.DetailActivity;
-import com.pluralsight.candycoded.InfoActivity;
-import com.pluralsight.candycoded.R;
+import com.pluralsight.app.DetailActivity;
+//import com.pluralsight.app.InfoActivity;
+import com.pluralsight.app.R;
 
 
 import cz.msebera.android.httpclient.Header;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private CandyDbHelper candyDbHelper = new CandyDbHelper(this);
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

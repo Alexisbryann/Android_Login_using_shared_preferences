@@ -1,4 +1,4 @@
-package com.pluralsight.candycoded;
+package com.pluralsight.app;
 
 public class Candy {
     public int id;

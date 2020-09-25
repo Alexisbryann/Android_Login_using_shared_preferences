@@ -1,4 +1,4 @@
-package com.pluralsight.candycoded.DB;
+package com.pluralsight.app.DB;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
