@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Login using shared preferences</string>
+    <string name="first_name">First name</string>
+    <string name="second_name">Second name</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="enter_password">Enter password</string>
+    <string name="confirm_password">Confirm password</string>
+</resources>
