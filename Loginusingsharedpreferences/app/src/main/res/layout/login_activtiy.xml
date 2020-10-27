@@ -15,7 +15,9 @@
         android:layout_marginEnd="16dp"
         android:autofillHints=""
         android:background="@drawable/rounded_corners"
+        android:backgroundTintMode="add"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="@string/username"
         android:inputType="textPersonName"
@@ -24,7 +26,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
 
     <EditText
         android:id="@+id/edt_password"
@@ -36,6 +38,7 @@
         android:autofillHints=""
         android:background="@drawable/rounded_corners"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -71,8 +74,38 @@
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_login" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="@string/welcome_to_please_login_to_your_account"
+        android:textColor="@color/colorLight"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_corners"
+        android:contentDescription="@string/company_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

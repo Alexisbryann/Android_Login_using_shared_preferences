@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/edt_firstname"
-        android:layout_width="0dp"
+        android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
@@ -16,6 +16,7 @@
         android:autofillHints=""
         android:background="@drawable/rounded_corners"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="@string/first_name"
         android:inputType="textPersonName"
@@ -23,7 +24,7 @@
         android:textColorHint="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/edt_username"
@@ -35,6 +36,7 @@
         android:autofillHints=""
         android:background="@drawable/rounded_corners"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="@string/username"
         android:inputType="textPersonName"
@@ -54,6 +56,7 @@
         android:autofillHints=""
         android:background="@drawable/rounded_corners"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="@string/second_name"
         android:inputType="textPersonName"
@@ -73,6 +76,7 @@
         android:autofillHints=""
         android:background="@drawable/rounded_corners"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="@string/e_mail"
         android:inputType="textPersonName|textEmailAddress"
@@ -92,6 +96,7 @@
         android:autofillHints=""
         android:background="@drawable/rounded_corners"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
@@ -111,6 +116,7 @@
         android:autofillHints=""
         android:background="@drawable/rounded_corners"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="@string/confirm_password"
         android:inputType="textPassword"
@@ -125,14 +131,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_corners"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="@string/register"
         android:textAllCaps="true"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_confirm_password" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:contentDescription="@string/company_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
