@@ -49,12 +49,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_username" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_login"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="@drawable/rounded_corners"
         android:text="@string/login"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="18sp"
