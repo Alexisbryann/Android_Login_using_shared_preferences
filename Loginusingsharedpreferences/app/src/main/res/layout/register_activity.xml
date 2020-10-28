@@ -16,17 +16,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/rounded_corners"
             android:fontFamily="sans-serif-smallcaps"
             android:text="@string/register"
             android:textAllCaps="true"
             android:textColor="@android:color/holo_orange_dark"
             android:textSize="18sp"
             android:textStyle="bold"
+            app:cornerRadius="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-            app:rippleColor="@android:color/holo_orange_light" />
+            app:rippleColor="@android:color/holo_orange_light"
+            app:strokeColor="@color/colorLight" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -54,7 +55,7 @@
             app:endIconTint="@color/colorLight"
             app:errorEnabled="true"
             app:hintEnabled="true"
-            app:hintTextColor="@color/colorLight"
+            app:hintTextColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
@@ -85,11 +86,10 @@
             android:layout_marginEnd="8dp"
             android:hint="@string/first_name"
             android:textColorHint="@color/colorLight"
-            app:boxBackgroundColor="@color/colorAccent"
             app:boxStrokeColor="@color/colorAccent"
             app:errorEnabled="true"
             app:hintEnabled="true"
-            app:hintTextColor="@color/colorLight"
+            app:hintTextColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -121,7 +121,7 @@
             app:boxStrokeColor="@color/colorAccent"
             app:errorEnabled="true"
             app:hintEnabled="true"
-            app:hintTextColor="@color/colorLight"
+            app:hintTextColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
@@ -147,7 +147,7 @@
             app:boxStrokeColor="@color/colorAccent"
             app:errorEnabled="true"
             app:hintEnabled="true"
-            app:hintTextColor="@color/colorLight"
+            app:hintTextColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
@@ -178,7 +178,7 @@
             app:boxStrokeColor="@color/colorAccent"
             app:errorEnabled="true"
             app:hintEnabled="true"
-            app:hintTextColor="@color/colorLight"
+            app:hintTextColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
@@ -204,7 +204,7 @@
             app:boxStrokeColor="@color/colorAccent"
             app:errorEnabled="true"
             app:hintEnabled="true"
-            app:hintTextColor="@color/colorLight"
+            app:hintTextColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
