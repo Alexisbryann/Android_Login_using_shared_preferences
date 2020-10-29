@@ -28,21 +28,13 @@ public class RegisterActivity extends AppCompatActivity {
     private String mEnterPass;
     private String mConfPass;
 
-    public static final String MyPreferences = "myPrefs";
+    public static  String MyPreferences = "myPrefs";
     public static final String Fname = "First name";
     public static final String Sname = "Second name";
     public static final String Uname = "Username";
     public static final String Email = "E-mail";
     public static final String Pass = "Password";
     private SharedPreferences mSharedPreferences;
-
-    private Boolean mSnameEmpty;
-    private Boolean mFnameEmpty;
-    private Boolean mUsernameEmpty;
-    private Boolean mEmailEmpty;
-    private Boolean mEnterPassEmpty;
-    private Boolean mConfirmPassEmpty;
-    private boolean mIsValid;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,8 +66,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private boolean checkFirstName() {
         mFName = mFirstName.getText().toString();
-        mFnameEmpty = mFName.isEmpty();
-        if (mFnameEmpty)
+        boolean fnameEmpty = mFName.isEmpty();
+        if (fnameEmpty)
             mFirstName.setError(getString(R.string.fname_error));
         mFirstName.requestFocus();
         return false;
@@ -83,8 +75,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private boolean checkSecondName() {
         mSName = mSecondName.getText().toString();
-        mSnameEmpty = mSName.isEmpty();
-        if (mSnameEmpty)
+        boolean snameEmpty = mSName.isEmpty();
+        if (snameEmpty)
             mSecondName.setError(getString(R.string.sname_error));
         mSecondName.requestFocus();
         return false;
@@ -92,8 +84,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private boolean checkUserName() {
         mUName = mUsername.getText().toString();
-        mUsernameEmpty = mUName.isEmpty();
-        if (mUsernameEmpty)
+        boolean usernameEmpty = mUName.isEmpty();
+        if (usernameEmpty)
             mUsername.setError(getString(R.string.username_error));
         mUsername.requestFocus();
         return false;
@@ -101,8 +93,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private boolean checkEmail() {
         mEmail1 = mEmail.getText().toString();
-        mEmailEmpty = mEmail1.isEmpty();
-        if (mEmailEmpty)
+        boolean emailEmpty = mEmail1.isEmpty();
+        if (emailEmpty)
             mEmail.setError(getString(R.string.email_error));
         mEmail.requestFocus();
         return false;
@@ -110,8 +102,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private boolean checkPass() {
         mEnterPass = mEnterPassword.getText().toString();
-        mEnterPassEmpty = mEnterPass.isEmpty();
-        if (mEnterPassEmpty)
+        boolean enterPassEmpty = mEnterPass.isEmpty();
+        if (enterPassEmpty)
             mEnterPassword.setError(getString(R.string.password_error));
         mEnterPassword.requestFocus();
         return false;
@@ -119,8 +111,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private boolean checkConfPass() {
         mConfPass = mConfirmPassword.getText().toString();
-        mConfirmPassEmpty = mConfPass.isEmpty();
-        if (mConfirmPassEmpty)
+        boolean confirmPassEmpty = mConfPass.isEmpty();
+        if (confirmPassEmpty)
             mConfirmPassword.setError(getString(R.string.confirm_password_error));
         mConfirmPassword.requestFocus();
         return false;
