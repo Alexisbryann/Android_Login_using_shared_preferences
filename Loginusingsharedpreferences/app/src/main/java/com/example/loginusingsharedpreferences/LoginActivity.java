@@ -65,15 +65,15 @@ public class LoginActivity extends AppCompatActivity {
         mUname2 = mSharedPreferences.getString("Username","");
         mPword2 = mSharedPreferences.getString("Password","");
 
-        if (mUname1.equals(mUname2) && mPword1.equals(mPword2)&&!mUname2.isEmpty()&&!mPword2.isEmpty()){
+        if (mUname1.equals(mUname2) && mPword1.equals(mPword2)&&!mUname2.isEmpty()&&!mPword2.isEmpty())
+        {
             Toast.makeText(LoginActivity.this,"Login Successful",Toast.LENGTH_LONG).show();
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            finish();
             startActivity(intent);
-        } else {
-            mUsername.setError("Invalid Username");
-            mPassword.setError("Invalid password");
         }
-        if (mUname1.isEmpty()){mUsername.setError("Enter Username");}
-        if (mPword1.isEmpty()){mPassword.setError("Enter password");}
+        if (mUname2.isEmpty()||!mUname1.matches(mUname2)){mUsername.setError("User does not exist");}
+        if (mUname1.isEmpty()){mUsername.setError("Username can not be empty");}
+        if (mPword1.isEmpty()){mPassword.setError("Password can not be empty");}
     }
 }

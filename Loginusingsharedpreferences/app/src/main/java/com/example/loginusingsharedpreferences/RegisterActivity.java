@@ -35,6 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
     public static final String Email = "E-mail";
     public static final String Pass = "Password";
     private SharedPreferences mSharedPreferences;
+    private String mUname2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -123,7 +124,8 @@ public class RegisterActivity extends AppCompatActivity {
         return confirmPassEmpty;
     }
 
-    private void saveUserDetails() {
+    private void saveUserDetails()
+    {
         boolean checkValid = (!checkFirstName() && !checkSecondName() && !checkUserName() &&
                 !checkEmail() && !checkPass() && !checkConfPass() && !checkPassMatch());
         if(!checkValid) {
