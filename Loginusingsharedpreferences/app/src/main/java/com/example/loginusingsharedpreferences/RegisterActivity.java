@@ -59,8 +59,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private boolean checkPassMatch() {
-        if (!mEnterPass.equals(mConfPass))
+        if (!mEnterPass.equals(mConfPass)) {
             mConfirmPassword.setError(getString(R.string.pass_not_match));
+        }
         return false;
     }
 
@@ -70,7 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (fnameEmpty)
             mFirstName.setError(getString(R.string.fname_error));
         mFirstName.requestFocus();
-        return false;
+        return fnameEmpty;
     }
 
     private boolean checkSecondName() {
@@ -79,7 +80,8 @@ public class RegisterActivity extends AppCompatActivity {
         if (snameEmpty)
             mSecondName.setError(getString(R.string.sname_error));
         mSecondName.requestFocus();
-        return false;
+
+        return snameEmpty;
     }
 
     private boolean checkUserName() {
@@ -88,7 +90,8 @@ public class RegisterActivity extends AppCompatActivity {
         if (usernameEmpty)
             mUsername.setError(getString(R.string.username_error));
         mUsername.requestFocus();
-        return false;
+
+        return usernameEmpty;
     }
 
     private boolean checkEmail() {
@@ -97,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (emailEmpty)
             mEmail.setError(getString(R.string.email_error));
         mEmail.requestFocus();
-        return false;
+        return emailEmpty;
     }
 
     private boolean checkPass() {
@@ -106,7 +109,8 @@ public class RegisterActivity extends AppCompatActivity {
         if (enterPassEmpty)
             mEnterPassword.setError(getString(R.string.password_error));
         mEnterPassword.requestFocus();
-        return false;
+
+        return enterPassEmpty;
     }
 
     private boolean checkConfPass() {
@@ -114,13 +118,20 @@ public class RegisterActivity extends AppCompatActivity {
         boolean confirmPassEmpty = mConfPass.isEmpty();
         if (confirmPassEmpty)
             mConfirmPassword.setError(getString(R.string.confirm_password_error));
-        mConfirmPassword.requestFocus();
-        return false;
+            mConfirmPassword.requestFocus();
+
+        return confirmPassEmpty;
     }
 
     private void saveUserDetails() {
-        if (!checkFirstName() || !checkSecondName() || !checkUserName() ||
-                !checkEmail() || !checkPass() || !checkConfPass() || !checkPassMatch()) {
+        boolean checkValid = (!checkFirstName() && !checkSecondName() && !checkUserName() &&
+                !checkEmail() && !checkPass() && !checkConfPass() && !checkPassMatch());
+        if(!checkValid) {
+            Toast.makeText(RegisterActivity.this, "Please complete your registration",
+                    Toast.LENGTH_LONG).show();
+        }
+        else
+            {
             SharedPreferences.Editor editor = mSharedPreferences.edit();
             editor.putString(Fname, mFName);
             editor.putString(Sname, mSName);
@@ -129,7 +140,8 @@ public class RegisterActivity extends AppCompatActivity {
             editor.putString(Pass, mEnterPass);
             editor.apply();
 
-            Toast.makeText(RegisterActivity.this, "Profile created, please Login.", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterActivity.this, "Profile created, please Login.",
+                    Toast.LENGTH_LONG).show();
 
             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
             startActivity(intent);

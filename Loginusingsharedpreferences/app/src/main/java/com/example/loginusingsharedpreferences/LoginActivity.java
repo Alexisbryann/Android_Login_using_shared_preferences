@@ -21,10 +21,8 @@ public class LoginActivity extends AppCompatActivity {
     private String mPword;
 
     public static  String MyPreferences = "myPrefs";
-
     private SharedPreferences mSharedPreferences;
     private final String KEY_USERNAME = "username";
-
     private final String KEY_PASSWORD = "password";
 
     @Override
@@ -54,11 +52,9 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void validateUser(){
 
-        mSharedPreferences = getSharedPreferences(MyPreferences,MODE_PRIVATE);
-
-        mUname = mSharedPreferences.getString(KEY_USERNAME,"");
-        mPword = mSharedPreferences.getString(KEY_PASSWORD,"");
-
+//        mSharedPreferences = getSharedPreferences(MyPreferences,MODE_PRIVATE);
+//        mUname = mSharedPreferences.getString(KEY_USERNAME,"");
+//        mPword = mSharedPreferences.getString(KEY_PASSWORD,"");
 
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
