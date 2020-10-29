@@ -13,4 +13,11 @@
     <string name="welcome_to_please_login_to_your_account">Lorem Ipsum neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</string>
     <string name="company_logo">company logo</string>
     <string name="jina">jina</string>
+    <string name="pass_not_match">Passwords don\'t match</string>
+    <string name="fname_error">Enter first name</string>
+    <string name="sname_error">Enter second name</string>
+    <string name="username_error">Enter username</string>
+    <string name="email_error">Enter e-mail</string>
+    <string name="password_error">Enter password</string>
+    <string name="confirm_password_error">Confirm password</string>
 </resources>
